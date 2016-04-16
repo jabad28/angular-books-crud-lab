@@ -1,7 +1,7 @@
 angular
        .module('libraryApp', ['ngRoute'])
-       .config(config)
-       .controller('BooksShowController', BooksShowController);
+       .config(config);
+      //  .controller('BooksShowController', BooksShowController);
 
 ////////////
 // ROUTES //
@@ -15,12 +15,12 @@ function config (  $routeProvider,   $locationProvider  )  {
     .when('/', {
       templateUrl: "/templates/books/index.html",
       controller:  "BooksIndexController",
-      controllerAs: "BooksShowCtrl"
+      controllerAs: "booksIndexCtrl"
     })
     .when('/books/:id', {
       templateUrl: "/templates/books/show.html",
       controller:  "BooksShowController",
-      controllerAs: "BooksShowCtrl"
+      controllerAs: "booksShowCtrl"
     })
     .otherwise({
       redirectTo: '/'
