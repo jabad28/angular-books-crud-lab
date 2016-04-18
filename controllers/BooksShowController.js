@@ -22,7 +22,7 @@ function BooksShowController($http, $routeParams, $location) {
     $http({
       method: 'PUT',
       url: 'https://super-crud.herokuapp.com/books/'+ book._id,
-    }).then(function bookUpdatesuccessCallback(json) {
+    }).then(function BookUpdateSuccessCallback(json) {
       // don't need to do anything!
     }, function errorCallback(response) {
       console.log('There was an error editing the data', response.data);
@@ -33,7 +33,7 @@ function BooksShowController($http, $routeParams, $location) {
     $http({
       method: 'DELETE',
       url: 'https://super-crud.herokuapp.com/books/'+ book._id,
-    }).then(function bookDeletesuccessCallback(json) {
+    }).then(function BookDeleteSuccessCallback(json) {
       var index = vm.books.indexOf(book);
       // vm.albums.splice(index,1);
     }, function errorCallback(response) {
